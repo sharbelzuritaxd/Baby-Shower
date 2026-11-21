@@ -1,0 +1,1107 @@
+1<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby Shower </title>
+  <meta name="description" content="Acompáñanos a celebrar la llegada de una nueva ilusión. Encuentra los detalles del Baby Shower de Diego y Chenoa y confirma tu asistencia.">
+  <meta name="theme-color" content="#E8DCC9">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_BO">
+  <meta property="og:title" content="Baby Shower">
+  <meta property="og:description" content="Muy pronto llegará una nueva personita a llenar nuestras vidas de amor. Nos alegraría compartir contigo este momento tan especial.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Libre Caslon Display + Molle + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Molle:ital@1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Libre Caslon Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            molle: ['"Molle"', 'cursive'],
+          },
+          colors: {
+            cielo: {
+              50: '#F5FAFC',
+              100: '#DCEBF0',
+              200: '#B8D8E8',
+              300: '#A7C7D8',
+              500: '#789EB2',
+              600: '#789EB2',
+              700: '#789EB2',
+              800: '#3A4A54',
+              900: '#3A4A54',
+            },
+            crema: {
+              50: '#FAF9F6',
+              100: '#F4F0E8',
+              200: '#DCEBF0',
+              300: '#D8C7A6',
+              400: '#B8B0A3',
+            },
+            pizarra: {
+              100: '#F4F0E8',
+              300: '#D8C7A6',
+              500: '#B8B0A3',
+              600: '#789EB2',
+              700: '#789EB2',
+              800: '#3A4A54',
+              900: '#3A4A54',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --baby-blue: #B8D8E8;
+      --powder-blue: #A7C7D8;
+      --dusty-blue: #789EB2;
+      --ice-blue: #DCEBF0;
+      --ivory: #F4F0E8;
+      --champagne: #D8C7A6;
+      --page-background: #E8DCC9;
+      --warm-greige: #B8B0A3;
+      --text-dark: #3A4A54;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--page-background);
+      color: var(--text-dark);
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    body p,
+    body label,
+    body button,
+    body input,
+    body select,
+    body textarea,
+    body .text-xs,
+    body [class*="text-[11px]"] {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    body .text-xs {
+      font-size: 0.8125rem;
+      line-height: 1.25rem;
+    }
+    .font-libre {
+      font-family: 'Libre Caslon Display', serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .font-molle {
+      font-family: 'Molle', cursive;
+      font-weight: 400;
+      font-style: italic;
+    }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5.5rem;
+    }
+    body {
+      -webkit-text-size-adjust: 100%;
+    }
+    header.site-header {
+      transition: transform 220ms ease, opacity 180ms ease;
+    }
+    header.site-header.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-105%);
+    }
+    h1,
+    h2,
+    h3 {
+      text-wrap: balance;
+    }
+    button,
+    a,
+    input,
+    select,
+    textarea {
+      -webkit-tap-highlight-color: transparent;
+    }
+    :focus-visible {
+      outline: 3px solid var(--dusty-blue);
+      outline-offset: 3px;
+    }
+    button,
+    a {
+      touch-action: manipulation;
+    }
+    img,
+    iframe {
+      max-width: 100%;
+    }
+    .skip-link {
+      position: fixed;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 60;
+      transform: translateY(-160%);
+      border-radius: 0.75rem;
+      background: #fff;
+      padding: 0.75rem 1rem;
+      color: var(--text-dark);
+      box-shadow: 0 4px 16px rgb(58 74 84 / 16%);
+    }
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+    .hero-illustration {
+      display: block;
+      width: auto;
+      height: clamp(13rem, 28vw, 22rem);
+      max-width: 100%;
+      margin: -0.5rem auto 2rem;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 20px rgb(58 74 84 / 12%));
+    }
+    #giftGrid {
+      align-items: stretch;
+    }
+    #giftGrid article {
+      box-shadow: 0 5px 20px rgb(58 74 84 / 4%);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+    .gift-tab {
+      min-height: 2.75rem;
+    }
+    #openBankModal,
+    #copyAccBtn,
+    #closeBankModal,
+    #closeBankModalFooter {
+      min-height: 2.75rem;
+    }
+    #bankModal > div {
+      box-sizing: border-box;
+      max-height: calc(100vh - 2rem);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+    @supports (height: 100dvh) {
+      #bankModal > div {
+        max-height: calc(100dvh - 2rem);
+      }
+    }
+    #closeBankModal {
+      min-width: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (hover: hover) {
+      #giftGrid article:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgb(58 74 84 / 8%);
+      }
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--powder-blue);
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: var(--ivory);
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding-top: max(0.65rem, env(safe-area-inset-top));
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      header .w-8 {
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+      main {
+        padding-top: 5.8rem;
+        padding-bottom: 3.5rem;
+      }
+      main > section {
+        margin-bottom: 3.5rem;
+      }
+      .font-molle {
+        font-size: clamp(2.65rem, 12vw, 3.35rem);
+        line-height: 1.02;
+        overflow-wrap: anywhere;
+      }
+      .hero-illustration {
+        height: clamp(13rem, 62vw, 17rem);
+        margin-bottom: 1.5rem;
+      }
+      section > .grid.grid-cols-4 {
+        gap: 0.35rem;
+      }
+      section > .grid.grid-cols-4 > div {
+        padding: 0.55rem 0.2rem;
+      }
+      section > .grid.grid-cols-4 span.font-libre {
+        font-size: 1.75rem;
+      }
+      #giftGrid {
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+      }
+      #giftGrid > article {
+        min-height: 0;
+      }
+      .gift-tab {
+        flex: 0 0 auto;
+        min-height: 2.5rem;
+      }
+      section[id="regalos"] > div:nth-of-type(2) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding: 0.25rem 1rem 0.75rem;
+        scrollbar-width: none;
+      }
+      section[id="regalos"] > div:nth-of-type(2)::-webkit-scrollbar {
+        display: none;
+      }
+      #rsvp form input,
+      #rsvp form select,
+      #rsvp form textarea,
+      #rsvp form button {
+        font-size: 1rem;
+      }
+      #rsvp form label {
+        font-size: 0.75rem;
+      }
+      #rsvp form input,
+      #rsvp form select,
+      #rsvp form textarea {
+        min-height: 3rem;
+      }
+      #rsvp form button {
+        min-height: 3.25rem;
+      }
+      #toastContainer {
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: max(0.75rem, env(safe-area-inset-bottom));
+      }
+      #toastContainer > div {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header .font-libre {
+        font-size: 0.95rem;
+      }
+      header a[href="#rsvp"] span {
+        display: none;
+      }
+      header a[href="#rsvp"] {
+        width: 2.75rem;
+        height: 2.75rem;
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    @media (max-width: 380px) {
+      section > .grid.grid-cols-4 span.font-libre {
+        font-size: 1.5rem;
+      }
+      section > .grid.grid-cols-4 span.text-\[11px\] {
+        letter-spacing: 0.02em;
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#E8DCC9] text-pizarra-900 min-h-screen relative selection:bg-cielo-200 selection:text-cielo-900">
+
+  <a class="skip-link" href="#mainContent">Saltar al contenido principal</a>
+
+  <!-- Header Fijo Minimalista -->
+  <header class="site-header fixed top-0 left-0 right-0 z-40 bg-crema-50/85 backdrop-blur-md border-b border-crema-200/80 py-3.5 px-4 transition-all">
+    <nav aria-label="Navegación principal" class="max-w-5xl w-full mx-auto flex flex-nowrap items-center justify-between gap-3">
+      <div class="flex min-w-0 flex-none items-center gap-2.5">
+        <span class="w-8 h-8 rounded-full bg-cielo-100 flex items-center justify-center text-cielo-700">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20px" width="20px" fill="#789EB2" aria-label="Estrella" role="img">
+            <path d="M7.63,6.4l2.8-3.63q0.3-0.4 0.71-0.59T12,2t0.86,0.19t0.71,0.59l2.8,3.63l4.25,1.43q0.65,0.2 1.03,0.74t0.38,1.19q0,0.3-0.09,0.6t-0.29,0.57l-2.75,3.9l0.1,4.1q0.03,0.88-0.57,1.47T17.03,21q-0.05,0-0.55-0.07L12,19.68L7.53,20.93Q7.4,20.98 7.25,20.99T6.98,21q-0.8,0-1.4-0.6Q4.98,19.8 5,18.93L5.1,14.8L2.38,10.93q-0.2-0.28-0.29-0.57T2,9.75Q2,9.13 2.36,8.59T3.38,7.82L7.63,6.4ZM8.85,8.13L4,9.73L7.1,14.2L7,18.98l5-1.38L17,19l-0.1-4.8L20,9.77L15.15,8.13L12,4L8.85,8.13ZM12,11.5Z"/>
+          </svg>
+        </span>
+        <span class="font-libre whitespace-nowrap text-xl tracking-wider font-semibold text-pizarra-900 uppercase">Baby Shower</span>
+      </div>
+      <div class="flex flex-none items-center gap-3">
+        <a href="#regalos" class="text-xs font-semibold text-pizarra-700 hover:text-cielo-700 transition-colors hidden sm:inline-flex items-center gap-1">
+          <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+          Mesa de Regalos
+        </a>
+        <a href="#rsvp" aria-label="Confirmar asistencia" class="text-xs font-semibold text-white bg-cielo-700 hover:bg-cielo-800 px-4 py-2 rounded-full shadow-sm transition-all flex items-center gap-1.5">
+          <i data-lucide="check" class="w-3.5 h-3.5"></i>
+          <span>Confirmar Asistencia</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Decoración Sutil Orgánica de Fondo -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-50">
+    <div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-cielo-100/60 blur-3xl"></div>
+    <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-crema-200/70 blur-3xl"></div>
+    <div class="absolute -bottom-20 left-1/3 w-80 h-80 rounded-full bg-cielo-50/80 blur-3xl"></div>
+  </div>
+
+  <main id="mainContent" class="relative z-10 pt-24 pb-20">
+    
+    <!-- HERO SECTION -->
+    <section class="max-w-3xl mx-auto px-4 text-center mt-6 sm:mt-10 mb-16">
+      <h1 class="font-molle text-5xl sm:text-6xl md:text-7xl tracking-tight text-pizarra-900 leading-[1.1] mb-4">
+        Con amor esperamos <br/>
+        <span class="italic font-normal text-cielo-700">una nueva ilusión</span>
+      </h1>
+      <p class="font-libre text-lg sm:text-xl text-cielo-800 mb-4">
+        Diego Herdia Ayala y Chenoa Farel Rico
+      </p>
+
+      <p class="text-sm sm:text-base text-pizarra-900 max-w-lg mx-auto font-normal leading-relaxed mb-6">
+        Muy pronto llegará una nueva personita a llenar nuestras vidas de amor. Nos alegraría muchísimo contar con tu compañía y compartir contigo este momento tan especial.
+      </p>
+
+      <img
+        src="./personaje.png"
+        alt="Ilustración de un osito en una canasta rodeado de globos azules y marfil"
+        class="hero-illustration"
+        width="1240"
+        height="1748"
+        fetchpriority="high"
+        decoding="async">
+
+      <!-- Tarjeta Principal con Cuenta Regresiva -->
+      <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-sm border border-crema-200 max-w-2xl mx-auto">
+        <div class="flex items-center justify-center gap-2 text-cielo-600 mb-4">
+          <i data-lucide="calendar-heart" class="w-5 h-5"></i>
+          <span class="text-xs uppercase tracking-widest font-semibold text-pizarra-600">Cuenta Regresiva</span>
+        </div>
+
+        <!-- Contador -->
+        <div class="grid grid-cols-4 gap-2.5 sm:gap-4 max-w-md mx-auto mb-6" role="timer" aria-label="Cuenta regresiva para el evento">
+          <div class="bg-crema-50 rounded-2xl p-3 border border-crema-200 text-center">
+            <span id="days" class="font-libre block text-3xl sm:text-4xl font-bold text-cielo-800">00</span>
+            <span class="text-[11px] sm:text-xs text-pizarra-500 uppercase tracking-wider font-semibold">Días</span>
+          </div>
+          <div class="bg-crema-50 rounded-2xl p-3 border border-crema-200 text-center">
+            <span id="hours" class="font-libre block text-3xl sm:text-4xl font-bold text-cielo-800">00</span>
+            <span class="text-[11px] sm:text-xs text-pizarra-500 uppercase tracking-wider font-semibold">Horas</span>
+          </div>
+          <div class="bg-crema-50 rounded-2xl p-3 border border-crema-200 text-center">
+            <span id="minutes" class="font-libre block text-3xl sm:text-4xl font-bold text-cielo-800">00</span>
+            <span class="text-[11px] sm:text-xs text-pizarra-500 uppercase tracking-wider font-semibold">Min</span>
+          </div>
+          <div class="bg-crema-50 rounded-2xl p-3 border border-crema-200 text-center">
+            <span id="seconds" class="font-libre block text-3xl sm:text-4xl font-bold text-cielo-800">00</span>
+            <span class="text-[11px] sm:text-xs text-pizarra-500 uppercase tracking-wider font-semibold">Seg</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-5 text-xs sm:text-sm text-pizarra-800 border-t border-crema-200 pt-5">
+          <div class="flex items-center gap-2">
+            <i data-lucide="calendar" class="w-4 h-4 text-cielo-600"></i>
+            <span id="dateDisplay" class="font-medium">13 de Diciembre</span>
+          </div>
+          <span class="text-crema-300">•</span>
+          <div class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-cielo-600"></i>
+            <span id="timeDisplay" class="font-medium">4:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALLES: LUGAR -->
+    <section class="max-w-2xl mx-auto px-4 mb-20">
+      <!-- Ubicación Centrada -->
+      <div class="bg-white/90 rounded-3xl p-6 sm:p-8 border border-crema-200 shadow-sm text-center">
+        <div class="w-12 h-12 rounded-2xl bg-cielo-50 text-cielo-700 flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="map-pin" class="w-6 h-6"></i>
+        </div>
+        <h2 class="font-libre text-2xl font-bold text-pizarra-900 mb-2">Lugar de Reunión</h2>
+        <p id="venueDisplay" class="font-semibold text-cielo-800 text-base mb-1">Marbella Coffee & Bakery</p>
+        <p id="addressDisplay" class="text-xs sm:text-sm text-pizarra-600 leading-relaxed mb-4 font-light max-w-md mx-auto">
+          Cochabamba, Bolivia
+        </p>
+        <div class="overflow-hidden rounded-2xl border border-crema-200 shadow-sm mb-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8118423931833!2d-66.1561992!3d-17.3727847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e3750051a6be67%3A0xb82813784ebfb25a!2sMarbella%20Coffee%20%26%20Bakery!5e0!3m2!1ses-419!2sbo!4v1795152727137!5m2!1ses-419!2sbo"
+            class="block w-full h-64 sm:h-80"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Ubicación de Marbella Coffee & Bakery">
+          </iframe>
+        </div>
+        <a id="mapsLink" href="https://maps.google.com/?q=Marbella+Coffee+%26+Bakery+Cochabamba" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 py-3 px-6 bg-crema-100 hover:bg-crema-200 text-pizarra-800 text-xs sm:text-sm font-semibold rounded-2xl transition-colors border border-crema-200">
+          <i data-lucide="navigation" class="w-4 h-4 text-cielo-700"></i>
+          <span>Ver Ubicación en Google Maps</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: MESA DE REGALOS NECESARIOS -->
+    <section id="regalos" class="max-w-4xl mx-auto px-4 mb-24 scroll-mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-cielo-100/70 text-cielo-800 text-xs font-semibold uppercase tracking-widest mb-3 border border-cielo-200">
+          <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+          Mesa de Regalos
+        </span>
+        <h2 class="font-libre text-3xl sm:text-4xl font-bold text-pizarra-900">
+          Una pequeña guía para esta nueva etapa
+        </h2>
+        <p class="text-xs sm:text-sm text-pizarra-900 mt-2 font-normal">
+          Tu presencia y tus buenos deseos son el mejor regalo. Esta lista es solo una guía opcional: puedes elegir algo si te resulta cómodo, pero no es necesario ni se reserva automáticamente.
+        </p>
+      </div>
+
+      <!-- Pestañas / Filtro de Categorías -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+        <button type="button" data-cat="todos" aria-pressed="true" class="gift-tab active-tab px-4 py-2 rounded-full text-xs font-semibold bg-cielo-700 text-white shadow-xs transition-all">
+          Todos los Esenciales
+        </button>
+        <button type="button" data-cat="higiene" aria-pressed="false" class="gift-tab px-4 py-2 rounded-full text-xs font-medium bg-white text-pizarra-700 border border-crema-200 hover:border-cielo-300 transition-all">
+          Higiene & Baño
+        </button>
+        <button type="button" data-cat="ropa" aria-pressed="false" class="gift-tab px-4 py-2 rounded-full text-xs font-medium bg-white text-pizarra-700 border border-crema-200 hover:border-cielo-300 transition-all">
+          Ropa & Textiles
+        </button>
+        <button type="button" data-cat="alimentacion" aria-pressed="false" class="gift-tab px-4 py-2 rounded-full text-xs font-medium bg-white text-pizarra-700 border border-crema-200 hover:border-cielo-300 transition-all">
+          Alimentación & Lactancia
+        </button>
+        <button type="button" data-cat="paseo" aria-pressed="false" class="gift-tab px-4 py-2 rounded-full text-xs font-medium bg-white text-pizarra-700 border border-crema-200 hover:border-cielo-300 transition-all">
+          Descanso & Paseo
+        </button>
+        <button type="button" data-cat="panales" aria-pressed="false" class="gift-tab px-4 py-2 rounded-full text-xs font-medium bg-white text-pizarra-700 border border-crema-200 hover:border-cielo-300 transition-all">
+          Lluvia de Pañales
+        </button>
+      </div>
+
+      <!-- Cuadrícula de Artículos Esenciales -->
+      <div id="giftGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-8">
+        <!-- Generados Dinámicamente -->
+      </div>
+
+      <!-- Tarjeta Opcional: Lluvia de Sobres / Transferencia Bancaria -->
+      <div class="bg-crema-100/70 rounded-3xl p-6 sm:p-7 border border-crema-200 text-center max-w-xl mx-auto">
+        <div class="w-10 h-10 rounded-full bg-white text-pizarra-700 mx-auto flex items-center justify-center mb-3 shadow-xs">
+          <i data-lucide="mail-open" class="w-5 h-5"></i>
+        </div>
+        <h3 class="font-libre text-xl font-bold text-pizarra-900 mb-1">Lluvia de Sobres o Transferencia (opcional)</h3>
+        <p class="text-xs text-pizarra-900 mb-4 font-normal">
+          La lluvia de sobres o cualquier transferencia, incluso mediante QR, son completamente opcionales. No hay compromiso ni es necesario hacer ningún aporte; lo que más agradecemos es compartir este día contigo.
+        </p>
+        <button id="openBankModal" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-crema-50 text-pizarra-800 text-xs font-semibold rounded-xl border border-crema-300 shadow-xs transition-colors">
+          <i data-lucide="credit-card" class="w-3.5 h-3.5 text-cielo-700"></i>
+          <span>Ver Datos Bancarios Opcionales</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE CONFIRMACIÓN (RSVP) -->
+    <section id="rsvp" class="max-w-xl mx-auto px-4 mb-20 scroll-mt-24">
+      <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-lg border border-crema-200 relative">
+        <div class="text-center mb-8">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cielo-100 text-cielo-800 text-xs font-semibold uppercase tracking-wider mb-2">
+            <i data-lucide="check-check" class="w-3.5 h-3.5"></i>
+            Confirmación RSVP
+          </span>
+          <h2 class="font-libre text-3xl sm:text-4xl font-bold text-pizarra-900">Nos encantaría verte</h2>
+          <p class="text-xs sm:text-sm text-pizarra-600 mt-2 font-light">
+            Si puedes acompañarnos, sería muy bonito saberlo antes del <strong id="rsvpDeadlineDisplay" class="text-cielo-800 font-semibold">5 de Diciembre</strong>. Si no puedes estar, también te llevamos en el corazón.
+          </p>
+        </div>
+
+        <form id="rsvpForm" class="space-y-5">
+          <!-- Nombre -->
+          <div>
+            <label class="block text-xs font-bold text-pizarra-800 uppercase tracking-wider mb-1.5" for="guestName">
+              Nombre Completo *
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-pizarra-400">
+                <i data-lucide="user" class="w-4 h-4"></i>
+              </span>
+              <input type="text" id="guestName" name="guestName" autocomplete="name" required placeholder="Ej. Camila Morales"
+                class="w-full pl-10 pr-4 py-3 rounded-2xl bg-crema-50 border border-crema-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cielo-500 text-xs sm:text-sm transition-all text-pizarra-900">
+            </div>
+          </div>
+
+          <!-- Teléfono -->
+          <div>
+            <label class="block text-xs font-bold text-pizarra-800 uppercase tracking-wider mb-1.5" for="guestPhone">
+              Número de Celular / WhatsApp
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-pizarra-400">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </span>
+              <input type="tel" id="guestPhone" name="guestPhone" autocomplete="tel" inputmode="tel" placeholder="Ej. +591 70000000"
+                class="w-full pl-10 pr-4 py-3 rounded-2xl bg-crema-50 border border-crema-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cielo-500 text-xs sm:text-sm transition-all text-pizarra-900">
+            </div>
+          </div>
+
+          <!-- Asistencia -->
+          <div>
+            <fieldset>
+              <legend class="block text-xs font-bold text-pizarra-800 uppercase tracking-wider mb-2">
+                ¿Podrás asistir? *
+              </legend>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="relative flex items-center p-3.5 rounded-2xl border cursor-pointer transition-all border-crema-200 hover:border-cielo-300 bg-crema-50 has-[:checked]:bg-cielo-50 has-[:checked]:border-cielo-600">
+                  <input type="radio" name="attending" value="yes" checked required class="w-4 h-4 text-cielo-700 focus:ring-cielo-600 border-crema-300">
+                  <span class="ml-3 text-xs sm:text-sm font-semibold text-pizarra-900 flex items-center gap-1.5">
+                    <i data-lucide="heart" class="w-4 h-4 text-cielo-700"></i>
+                    ¡Sí, con mucho gusto!
+                  </span>
+                </label>
+                <label class="relative flex items-center p-3.5 rounded-2xl border cursor-pointer transition-all border-crema-200 hover:border-pizarra-300 bg-crema-50 has-[:checked]:bg-pizarra-100 has-[:checked]:border-pizarra-500">
+                  <input type="radio" name="attending" value="no" class="w-4 h-4 text-pizarra-600 focus:ring-pizarra-500 border-crema-300">
+                  <span class="ml-3 text-xs sm:text-sm font-semibold text-pizarra-900 flex items-center gap-1.5">
+                    <i data-lucide="heart-off" class="w-4 h-4 text-pizarra-600"></i>
+                    No podré asistir
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Acompañantes -->
+          <div id="companionsContainer">
+            <label class="block text-xs font-bold text-pizarra-800 uppercase tracking-wider mb-1.5" for="guestCompanions">
+              Acompañantes adicionales
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-pizarra-400">
+                <i data-lucide="users" class="w-4 h-4"></i>
+              </span>
+              <select id="guestCompanions" class="w-full pl-10 pr-4 py-3 rounded-2xl bg-crema-50 border border-crema-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cielo-500 text-xs sm:text-sm transition-all text-pizarra-900">
+                <option value="0">Solo yo (0 acompañantes)</option>
+                <option value="1">+1 acompañante</option>
+                <option value="2">+2 acompañantes</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Regalo -->
+          <div id="giftContainer">
+            <label class="block text-xs font-bold text-pizarra-800 uppercase tracking-wider mb-1.5" for="guestGift">
+              ¿Qué regalo llevarás? (opcional)
+            </label>
+            <select id="guestGift" class="w-full px-4 py-3 rounded-2xl bg-crema-50 border border-crema-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cielo-500 text-xs sm:text-sm transition-all text-pizarra-900">
+              <option value="">No llevaré un regalo de esta lista</option>
+            </select>
+          </div>
+
+          <!-- Mensaje -->
+          <div>
+            <label class="block text-xs font-bold text-pizarra-800 uppercase tracking-wider mb-1.5" for="guestMessage">
+              <span id="guestMessageLabel">Mensaje o bendiciones para Diego y Chenoa</span>
+            </label>
+            <textarea id="guestMessage" name="guestMessage" rows="3" maxlength="500" placeholder="¡Muchísimas felicidades! Muy felices de celebrar este día con ustedes..."
+              class="w-full px-4 py-3 rounded-2xl bg-crema-50 border border-crema-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cielo-500 text-xs sm:text-sm transition-all text-pizarra-900 custom-scrollbar"></textarea>
+          </div>
+
+          <!-- Botón de Envío -->
+          <button type="submit" id="submitBtn" class="w-full py-4 px-6 rounded-2xl bg-cielo-700 hover:bg-cielo-800 text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 transform active:scale-[0.99]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span id="submitBtnLabel">Confirmar y Notificar por WhatsApp</span>
+          </button>
+
+          <p class="text-center text-[11px] text-pizarra-500 font-light">
+            Se abrirá WhatsApp con tu respuesta preparada. Pulsa «Enviar» allí para compartirla con el anfitrión.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-xs text-pizarra-500 pt-8 pb-4">
+      <p class="font-libre italic text-lg text-pizarra-800 mb-1">¡Gracias por acompañarnos con tanto amor!</p>
+      <p class="font-normal text-pizarra-900">Baby Shower • 13 de Diciembre</p>
+    </footer>
+  </main>
+
+  <!-- MODAL: DATOS BANCARIOS -->
+  <div id="bankModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="bankModalTitle" aria-hidden="true">
+    <div class="bg-white rounded-3xl p-4 sm:p-5 max-w-sm w-full shadow-xl border border-crema-200">
+      <div class="flex items-start justify-between gap-4 mb-4 pb-3 border-b border-crema-200">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.16em] font-semibold text-cielo-700 mb-1">Aporte voluntario</p>
+          <h3 id="bankModalTitle" class="font-libre font-bold text-xl text-pizarra-900">Datos Bancarios</h3>
+        </div>
+        <button id="closeBankModal" type="button" aria-label="Cerrar datos bancarios" class="shrink-0 p-1 rounded-full text-pizarra-500 hover:text-pizarra-800">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <figure class="mb-4 p-3.5 bg-crema-50 rounded-2xl border border-crema-200 text-center">
+        <figcaption class="flex items-center justify-center gap-2 text-xs font-semibold text-pizarra-900 mb-1">
+          Código QR
+          <span class="rounded-full bg-white border border-cielo-200 px-2 py-0.5 text-[10px] font-semibold text-cielo-800">Opcional</span>
+        </figcaption>
+        <p class="text-[11px] text-pizarra-600 mb-2">Banco Económico</p>
+        <img
+          src="./qr-transferencia.png"
+          alt="Código QR del Banco Económico para una transferencia opcional"
+          width="232"
+          height="333"
+          class="block w-full max-w-[12rem] h-auto mx-auto rounded-lg bg-white"
+          loading="lazy"
+          decoding="async">
+        <p class="text-xs leading-relaxed text-pizarra-700 mt-2">Escanéalo solo si deseas realizar un aporte.</p>
+      </figure>
+      <section aria-labelledby="bankTransferTitle">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <h4 id="bankTransferTitle" class="font-semibold text-sm text-pizarra-900">Transferencia bancaria</h4>
+          <span class="shrink-0 rounded-full bg-crema-50 border border-crema-200 px-2.5 py-1 text-[10px] font-semibold text-pizarra-700">Opcional</span>
+        </div>
+        <div class="p-3.5 bg-crema-50 rounded-2xl border border-crema-200 text-xs text-pizarra-700">
+          <div class="pb-3">
+            <span class="block text-[10px] uppercase tracking-wide font-bold text-pizarra-500 mb-1">Banco</span>
+            <p class="font-semibold text-pizarra-900">Banco Nacional / Mercantil</p>
+          </div>
+          <div class="border-t border-crema-200 py-3">
+            <span class="block text-[10px] uppercase tracking-wide font-bold text-pizarra-500 mb-1">Número de Cuenta</span>
+            <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+              <span class="font-mono text-xs font-bold tracking-wide text-cielo-800" id="bankAccNumber">4029-3829-1928-10</span>
+              <button id="copyAccBtn" type="button" class="text-[11px] text-cielo-700 hover:underline font-semibold inline-flex items-center gap-1">
+                <i data-lucide="copy" class="w-3.5 h-3.5"></i> Copiar
+              </button>
+            </div>
+          </div>
+          <div class="border-t border-crema-200 pt-3">
+            <span class="block text-[10px] uppercase tracking-wide font-bold text-pizarra-500 mb-1">Titular</span>
+            <p class="font-semibold text-pizarra-900 break-words">Diego Herdia Ayala y Chenoa Farel Rico</p>
+          </div>
+        </div>
+      </section>
+      <button id="closeBankModalFooter" type="button" class="w-full mt-4 py-2.5 bg-crema-100 hover:bg-crema-200 text-pizarra-800 text-xs font-semibold rounded-2xl transition-colors">
+        Cerrar
+      </button>
+    </div>
+  </div>
+
+  <!-- CONTENEDOR TOAST -->
+  <div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- SCRIPT DE LÓGICA DE REGALOS & RSVP -->
+  <script type="module">
+    // Configuración del Evento (Completamente neutro, 13 de Diciembre)
+    const eventConfig = {
+      eventDate: '2026-12-13T16:00:00',
+      eventDateLabel: '13 de Diciembre',
+      eventTimeLabel: '4:00 PM',
+      venue: 'Marbella Coffee & Bakery',
+      address: 'Cochabamba, Bolivia',
+      mapsUrl: 'https://maps.google.com/?q=Marbella+Coffee+%26+Bakery+Cochabamba',
+      hostPhone: '59171488822',
+      rsvpDeadline: '5 de Diciembre'
+    };
+
+    // LISTA DE REGALOS NECESARIOS
+    const essentialGifts = [
+      { id: 'reg-1', cat: 'higiene', title: 'Bañera para bebé', desc: 'Bañera cómoda y segura para la hora del baño.', tag: 'Higiene & Baño' },
+      { id: 'reg-2', cat: 'higiene', title: 'Kit de aseo y cuidado diario', quantityBadge: '5', desc: 'Estuche básico para el cuidado diario (cepillo, peine, aspirador nasal, etc.).', tag: 'Higiene & Baño' },
+      { id: 'reg-3', cat: 'higiene', title: 'Set de baño para bebé', desc: 'Accesorios y productos esenciales para el baño.', tag: 'Higiene & Baño' },
+      { id: 'reg-4', cat: 'higiene', title: 'Toallas de baño', desc: 'Toallas suaves y absorbentes para secar al bebé.', tag: 'Higiene & Baño' },
+      { id: 'reg-5', cat: 'higiene', title: 'Shampoo para bebé', desc: 'Shampoo suave especial para su piel y cabello delicado.', tag: 'Higiene & Baño' },
+      { id: 'reg-6', cat: 'higiene', title: 'Talco para bebé', desc: 'Talco suave para el cuidado diario.', tag: 'Higiene & Baño' },
+      { id: 'reg-7', cat: 'higiene', title: 'Aceite para bebé', desc: 'Aceite hidratante ideal para masajes después del baño.', tag: 'Higiene & Baño' },
+      { id: 'reg-8', cat: 'higiene', title: 'Corta Uñas para bebé', desc: 'Cortaúñas con punta redondeada diseñado para sus uñitas.', tag: 'Higiene & Baño' },
+      { id: 'reg-9', cat: 'panales', title: 'Pañales', desc: 'Pañales descartables (cualquier talla será de gran ayuda).', tag: 'Lluvia de Pañales' },
+      { id: 'reg-10', cat: 'panales', title: 'Organizador de pañales', desc: 'Canasta o organizador práctico para tener sus cosas a mano.', tag: 'Lluvia de Pañales' },
+      { id: 'reg-11', cat: 'paseo', title: 'Cambiador portátil', desc: 'Cambiador plegable y fácil de llevar en el bolso.', tag: 'Descanso & Paseo' },
+      { id: 'reg-12', cat: 'higiene', title: 'Pañitos de franela', desc: 'Pañitos suaves de algodón o franela para limpiar al bebé.', tag: 'Higiene & Baño' },
+      { id: 'reg-13', cat: 'higiene', title: 'Paños para eructar', desc: 'Paños absorbentes para apoyar en el hombro después de comer.', tag: 'Higiene & Baño' },
+      { id: 'reg-14', cat: 'ropa', title: 'Body básico de algodón', desc: 'Prenda interior cómoda de algodón para uso diario.', tag: 'Ropa & Textiles' },
+      { id: 'reg-15', cat: 'ropa', title: 'Conjunto para bebé', desc: 'Mudita o conjunto de ropa cómodo para salir o estar en casa.', tag: 'Ropa & Textiles' },
+      { id: 'reg-16', cat: 'ropa', title: 'Mantas y muselinas', desc: 'Mantas ligeras y suaves para arroparlo.', tag: 'Ropa & Textiles' },
+      { id: 'reg-17', cat: 'alimentacion', title: 'Juego de mamaderas', desc: 'Set de biberones para la alimentación del bebé.', tag: 'Alimentación & Lactancia' },
+      { id: 'reg-18', cat: 'paseo', title: 'Mecedor', desc: 'Silla mecedora o hamaca cómoda para su descanso.', tag: 'Descanso & Paseo' }
+    ];
+
+    function updateIcons() {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    }
+
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = `pointer-events-auto px-4 py-2.5 rounded-2xl text-xs font-semibold shadow-lg border flex items-center gap-2 transform transition-all duration-300 translate-y-2 opacity-0 ${
+        type === 'success' ? 'bg-cielo-800 text-white border-cielo-700' : 'bg-pizarra-800 text-white border-pizarra-700'
+      }`;
+      const messageElement = document.createElement('span');
+      messageElement.textContent = message;
+      toast.appendChild(messageElement);
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      }, 20);
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // Renderizar la lista de Regalos
+    function renderGifts(category = 'todos') {
+      const grid = document.getElementById('giftGrid');
+      grid.innerHTML = '';
+
+      const filtered = category === 'todos' 
+        ? essentialGifts 
+        : essentialGifts.filter(g => g.cat === category);
+
+      filtered.forEach(gift => {
+        const card = document.createElement('article');
+        card.className = "bg-white rounded-2xl p-4 sm:p-5 border border-crema-200 flex flex-col justify-between hover:border-cielo-300 transition-all shadow-xs";
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-cielo-50 text-cielo-800 border border-cielo-100">
+                ${escapeHtml(gift.tag)}
+              </span>
+              <span class="text-cielo-600">
+                <i data-lucide="check" class="w-3.5 h-3.5"></i>
+              </span>
+            </div>
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-bold text-pizarra-900 text-sm">${escapeHtml(gift.title)}</h3>
+              ${gift.quantityBadge ? `<span class="inline-flex min-w-6 h-6 items-center justify-center rounded-full bg-pizarra-300 text-pizarra-900 text-xs font-bold" title="Cantidad: ${escapeHtml(gift.quantityBadge)}">${escapeHtml(gift.quantityBadge)}</span>` : ''}
+            </div>
+            <p class="text-xs text-pizarra-600 leading-relaxed font-light mb-4">${escapeHtml(gift.desc)}</p>
+          </div>
+          <button type="button" data-gift-id="${escapeHtml(gift.id)}" class="reserve-gift-btn w-full py-2 px-3 rounded-xl bg-crema-50 hover:bg-cielo-50 text-cielo-800 hover:text-cielo-900 text-xs font-semibold border border-crema-200 hover:border-cielo-300 transition-colors flex items-center justify-center gap-1.5">
+            <i data-lucide="message-square" class="w-3.5 h-3.5 text-cielo-600"></i>
+            <span>Elegir este regalo</span>
+          </button>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      document.querySelectorAll('.reserve-gift-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const giftSelect = document.getElementById('guestGift');
+          giftSelect.value = btn.getAttribute('data-gift-id');
+          document.getElementById('rsvp').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      updateIcons();
+    }
+
+    function populateGiftOptions() {
+      const giftSelect = document.getElementById('guestGift');
+      essentialGifts.forEach(gift => {
+        const option = document.createElement('option');
+        option.value = gift.id;
+        option.textContent = gift.quantityBadge ? `${gift.title} (5)` : gift.title;
+        giftSelect.appendChild(option);
+      });
+    }
+
+    // Cuenta Regresiva
+    function initCountdown() {
+      const targetDate = new Date(eventConfig.eventDate).getTime();
+      
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          document.getElementById('days').innerText = '00';
+          document.getElementById('hours').innerText = '00';
+          document.getElementById('minutes').innerText = '00';
+          document.getElementById('seconds').innerText = '00';
+          return false;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        return true;
+      }
+
+      if (updateCountdown()) {
+        const interval = setInterval(() => {
+          if (!updateCountdown()) clearInterval(interval);
+        }, 1000);
+      }
+    }
+
+    // Envío del Formulario RSVP
+    function updateAttendanceForm() {
+      const attending = document.querySelector('input[name="attending"]:checked').value === 'yes';
+      const messageLabel = document.getElementById('guestMessageLabel');
+      const messageField = document.getElementById('guestMessage');
+      const submitLabel = document.getElementById('submitBtnLabel');
+
+      document.getElementById('companionsContainer').classList.toggle('hidden', !attending);
+      document.getElementById('giftContainer').classList.toggle('hidden', !attending);
+      messageLabel.textContent = attending
+        ? 'Mensaje o bendiciones para Diego y Chenoa'
+        : 'Mensaje o buenos deseos (opcional)';
+      messageField.placeholder = attending
+        ? '¡Muchísimas felicidades! Muy felices de celebrar este día con ustedes...'
+        : 'Aunque no pueda acompañarlos, les deseo mucha felicidad...';
+      submitLabel.textContent = attending
+        ? 'Confirmar y Notificar por WhatsApp'
+        : 'Enviar respuesta por WhatsApp';
+    }
+
+    function handleRsvpSubmit(e) {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75');
+
+      const name = document.getElementById('guestName').value.trim();
+      const phone = document.getElementById('guestPhone').value.trim();
+      const attending = document.querySelector('input[name="attending"]:checked').value === 'yes';
+      const companions = attending ? parseInt(document.getElementById('guestCompanions').value, 10) : 0;
+      const giftId = attending ? document.getElementById('guestGift').value : '';
+      const selectedGift = giftId ? essentialGifts.find(gift => gift.id === giftId) : null;
+      const message = document.getElementById('guestMessage').value.trim();
+
+      if (attending && window.confetti) {
+        window.confetti({
+          particleCount: 80,
+          spread: 60,
+          origin: { y: 0.6 },
+          colors: ['#B8D8E8', '#A7C7D8', '#D8C7A6', '#F4F0E8']
+        });
+      }
+
+      let waText = `🌿 *Confirmación de Asistencia - Baby Shower (13 de Diciembre)* ✨\n\n`;
+      waText += `👤 *Invitado:* ${name}\n`;
+      waText += `💌 *Asistencia:* ${attending ? '✅ ¡Sí, asistiré con alegría!' : '❌ Lo siento, no podré asistir'}\n`;
+
+      if (attending) {
+        waText += `👥 *Acompañantes adicionales:* ${companions}\n`;
+        waText += `✨ *Total de personas:* ${1 + companions}\n`;
+      }
+
+      if (attending) {
+        waText += `📍 *Lugar:* ${eventConfig.venue}\n`;
+        waText += `🗺️ *Dirección:* ${eventConfig.address}\n`;
+        waText += `🧭 *Ver en Google Maps:* ${eventConfig.mapsUrl}\n`;
+      }
+
+      if (phone) {
+        waText += `📞 *Teléfono:* ${phone}\n`;
+      }
+
+      if (selectedGift) {
+        const giftLabel = selectedGift.quantityBadge
+          ? `${selectedGift.title} (Cantidad: ${selectedGift.quantityBadge})`
+          : selectedGift.title;
+        waText += `🎁 *Regalo que llevaré:* ${giftLabel}\n`;
+      }
+
+      if (message) {
+        waText += `💬 *Mensaje para Diego y Chenoa:* "${message}"\n`;
+      }
+
+      waText += `\n¡Gracias por la invitación! 🤍`;
+
+      const encodedWa = encodeURIComponent(waText);
+      const hostNumber = eventConfig.hostPhone.replace(/[^0-9]/g, '');
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=${hostNumber}&text=${encodedWa}`;
+
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+      showToast("WhatsApp está listo con tu confirmación. Pulsa «Enviar» para compartirla.", "success");
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-75');
+      document.getElementById('rsvpForm').reset();
+      updateAttendanceForm();
+    }
+
+    function escapeHtml(string) {
+      if (!string) return '';
+      return String(string)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const siteHeader = document.querySelector('.site-header');
+      let previousScrollY = window.scrollY;
+      siteHeader.addEventListener('focusin', () => {
+        siteHeader.classList.remove('is-hidden');
+      });
+      window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+        const scrollDelta = currentScrollY - previousScrollY;
+
+        if (currentScrollY <= 80 || scrollDelta < -6) {
+          siteHeader.classList.remove('is-hidden');
+        } else if (scrollDelta > 6 && !siteHeader.contains(document.activeElement)) {
+          siteHeader.classList.add('is-hidden');
+        }
+
+        previousScrollY = currentScrollY;
+      }, { passive: true });
+
+      initCountdown();
+      populateGiftOptions();
+      renderGifts('todos');
+      updateIcons();
+
+      // Configuración de texto inicial
+      document.getElementById('dateDisplay').innerText = eventConfig.eventDateLabel;
+      document.getElementById('timeDisplay').innerText = eventConfig.eventTimeLabel;
+      document.getElementById('venueDisplay').innerText = eventConfig.venue;
+      document.getElementById('addressDisplay').innerText = eventConfig.address;
+      document.getElementById('rsvpDeadlineDisplay').innerText = eventConfig.rsvpDeadline;
+
+      // Eventos de Pestañas de Regalos
+      const tabs = document.querySelectorAll('.gift-tab');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => {
+            t.className = "gift-tab px-4 py-2 rounded-full text-xs font-medium bg-white text-pizarra-700 border border-crema-200 hover:border-cielo-300 transition-all";
+            t.setAttribute('aria-pressed', 'false');
+          });
+          tab.className = "gift-tab active-tab px-4 py-2 rounded-full text-xs font-semibold bg-cielo-700 text-white shadow-xs transition-all";
+          tab.setAttribute('aria-pressed', 'true');
+          renderGifts(tab.getAttribute('data-cat'));
+        });
+      });
+
+      const bankModal = document.getElementById('bankModal');
+      let previousFocus = null;
+      function openBankModal() {
+        previousFocus = document.activeElement;
+        bankModal.classList.remove('hidden');
+        bankModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('closeBankModal').focus();
+      }
+      function closeBankModal() {
+        if (bankModal.classList.contains('hidden')) return;
+        bankModal.classList.add('hidden');
+        bankModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overflow-hidden');
+        if (previousFocus instanceof HTMLElement) previousFocus.focus();
+      }
+      document.getElementById('openBankModal').addEventListener('click', openBankModal);
+      document.getElementById('closeBankModal').addEventListener('click', closeBankModal);
+      document.getElementById('closeBankModalFooter').addEventListener('click', closeBankModal);
+      bankModal.addEventListener('click', event => {
+        if (event.target === bankModal) closeBankModal();
+      });
+      bankModal.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+          closeBankModal();
+          return;
+        }
+        if (event.key !== 'Tab') return;
+
+        const focusable = bankModal.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+
+      // Toggle Acompañantes en Formulario
+      const radioAttending = document.querySelectorAll('input[name="attending"]');
+      radioAttending.forEach(radio => {
+        radio.addEventListener('change', () => {
+          updateAttendanceForm();
+          if (radio.value === 'no' && radio.checked) {
+            document.getElementById('guestCompanions').value = '0';
+            document.getElementById('guestGift').value = '';
+          }
+        });
+      });
+      updateAttendanceForm();
+
+      // Enviar Formulario RSVP
+      document.getElementById('rsvpForm').addEventListener('submit', handleRsvpSubmit);
+
+      // Copiar Cuenta Bancaria
+      document.getElementById('copyAccBtn').addEventListener('click', async () => {
+        const acc = document.getElementById('bankAccNumber').innerText;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(acc);
+          } else {
+            const temp = document.createElement('textarea');
+            temp.value = acc;
+            temp.setAttribute('readonly', '');
+            temp.style.position = 'fixed';
+            temp.style.opacity = '0';
+            document.body.appendChild(temp);
+            temp.select();
+            const copied = document.execCommand('copy');
+            document.body.removeChild(temp);
+            if (!copied) throw new Error('No se pudo copiar');
+          }
+          showToast("Número de cuenta copiado al portapapeles", "success");
+        } catch (error) {
+          showToast("No pudimos copiar la cuenta. Puedes seleccionarla manualmente.", "error");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
